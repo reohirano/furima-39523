@@ -37,7 +37,7 @@ Things you may want to cover:
 
 # Association
 - has_many :items
-- has_one :purchase
+- has_many :purchases
 
 # itemsテーブル
 | Column             | Type       | Options                       |
@@ -57,7 +57,7 @@ Things you may want to cover:
 - has_one :purchase
 
 
-# purchaseテーブル
+# purchasesテーブル
 | Column       | Type       | Options                       |
 | user         | references | null: false, foreign_key: true|
 | item         | references | null: false, foreign_key: true|
