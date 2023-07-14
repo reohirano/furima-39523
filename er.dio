@@ -88,12 +88,12 @@
                     <mxGeometry y="60" width="140" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="61" value="has_many :item&lt;br&gt;has_one :purchase" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#000000;" vertex="1" parent="1">
-                    <mxGeometry x="150" y="370" width="140" height="60" as="geometry"/>
+                    <mxGeometry x="150" y="380" width="140" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="62" value="belongs_to :user&lt;br&gt;has_one :purchase" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#000000;" vertex="1" parent="1">
                     <mxGeometry x="520" y="400" width="140" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="42" value="date" style="text;strokeColor=default;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;perimeterSpacing=1;" vertex="1" parent="1">
+                <mxCell id="42" value="&lt;div style=&quot;color: rgb(197, 200, 198); background-color: rgb(30, 30, 30); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px; line-height: 19px;&quot;&gt;&lt;span style=&quot;&quot;&gt;birth_day&lt;/span&gt;&lt;/div&gt;" style="text;strokeColor=default;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;perimeterSpacing=1;" vertex="1" parent="1">
                     <mxGeometry x="30" y="360" width="140" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="69" value="" style="endArrow=none;html=1;" edge="1" parent="1">
