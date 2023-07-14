@@ -67,7 +67,7 @@ Things you may want to cover:
 - belongs_to :item
 - has_one :receiver_address
 
-# receiver_address
+# receiver_addresses
 | Column       | Type       | Options                       |
 | ------       | ------     | -----------                   |
 | post_cord    | string     | null: false                   |
