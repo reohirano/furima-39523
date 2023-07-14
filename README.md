@@ -56,14 +56,6 @@ Things you may want to cover:
 - belongs_to :user
 - has_one :purchase
 
-# cardテーブル
-| Column    | Type   | Options     |
-| ------    | ------ | ----------- |
-| card_id   | string | null: false |
-| user_id   | string | null: false |
-
-# Association
-- belongs_to :user
 
 # purchaseテーブル
 | Column       | Type       | Options                       |
@@ -71,7 +63,8 @@ Things you may want to cover:
 | item         | references | null: false, foreign_key: true|
 
 # Association
-- belongs_to :items
+- belongs_to :user
+- belongs_to :item
 - has_one :receiver_address
 
 # receiver_address
@@ -79,6 +72,7 @@ Things you may want to cover:
 | ------       | ------     | -----------                   |
 | post_cord    | string     | null: false                   |
 | area_id      | integer    | null: false                   |
+| city         | string     | null: false                   |
 | address      | string     | null: false                   |
 | building     | string     |                               |
 | phone_number | string     | null: false                   |
