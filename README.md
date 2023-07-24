@@ -45,7 +45,7 @@ Things you may want to cover:
 | name               | string     | null: false                   |
 | explain            |  text      | null: false                   |
 | category_id        | integer    | null: false                   |
-| condition_id       | integer    | null: false                   |
+| item_states_id     | integer    | null: false                   |
 | cost_id            | integer    | null: false                   |
 | area_id            | integer    | null: false                   |
 | d_day_id           | integer    | null: false                   |
