@@ -26,9 +26,6 @@ class ItemsController < ApplicationController
     end
   end
 
-  def show
-  end
-
   def update
     @item.update(item_params)
     if @item.valid?
@@ -38,7 +35,16 @@ class ItemsController < ApplicationController
     end
   end
 
+  def show
+  end
+
   def destroy
+    if @item.user_id == current_user.id
+      @item.destroy
+      redirect_to root_path
+    else
+      redirect_to root_path
+    end
   end
 
   private
