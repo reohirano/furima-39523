@@ -35,12 +35,9 @@ class ItemsController < ApplicationController
     end
   end
 
-<<<<<<< Updated upstream
   def show
   end
 
-=======
->>>>>>> Stashed changes
   def destroy
     if @item.user_id == current_user.id
       @item.destroy
