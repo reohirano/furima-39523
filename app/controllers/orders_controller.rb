@@ -10,12 +10,10 @@ class OrdersController < ApplicationController
   def create
      @order_form = OrderForm.new(sipping_address_params)
    if @order_form.valid?
-     @item = Item.find(params[:item_id])
      pay_item
      @order_form.save
      redirect_to root_path
    else
-    @item = Item.find(params[:item_id]) 
      render :index, status: :unprocessable_entity
    end
   end
