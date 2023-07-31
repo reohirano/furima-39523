@@ -3,6 +3,7 @@ class OrdersController < ApplicationController
   before_action :non_purchased_item, only: [:index, :create]
 
   def index
+    gon.public_key = ENV["PAYJP_PUBLIC_KEY"]
     @item = Item.find(params[:item_id])
     @order_form = OrderForm.new
   end
@@ -25,7 +26,7 @@ class OrdersController < ApplicationController
   end
 
   def pay_item
-   Payjp.api_key = "sk_test_022b55e313df35d3e582448a"  
+    Payjp.api_key = ENV['PAYJP_SECRET_KEY']
     Payjp::Charge.create(
       amount: @item[:price],                    # 商品の値段
       card: sipping_address_params[:token],    # カードトークン
