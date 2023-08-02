@@ -50,67 +50,67 @@ RSpec.describe OrderForm, type: :model do
       it 'user_idが空だと保存できない' do
         @order_form.user_id = nil
         @order_form.valid?
-        expect(@order_form.errors.full_messages).to include("User can't be blank")
+        expect(@order_form.errors.full_messages).to include("Userを入力してください")
       end
       it 'item_idが空だと保存できない' do
         @order_form.item_id = nil
         @order_form.valid?
-        expect(@order_form.errors.full_messages).to include("Item can't be blank")
+        expect(@order_form.errors.full_messages).to include("Itemを入力してください")
       end
       it '郵便番号が空だと保存できないこと' do
         @order_form.postcode = nil
         @order_form.valid?
-        expect(@order_form.errors.full_messages).to include("Postcode can't be blank", 'Postcode is invalid. Include hyphen(-)')
+        expect(@order_form.errors.full_messages).to include("郵便番号を入力してください", "郵便番号にハイフン(-)が含まれていません")
       end
       it '郵便番号にハイフンがないと保存できないこと' do
         @order_form.postcode = 1_234_567
         @order_form.valid?
-        expect(@order_form.errors.full_messages).to include('Postcode is invalid. Include hyphen(-)')
+        expect(@order_form.errors.full_messages).to include("郵便番号にハイフン(-)が含まれていません")
       end
       it '都道府県が「---」だと保存できないこと' do
         @order_form.area_id = 0
         @order_form.valid?
-        expect(@order_form.errors.full_messages).to include("Area can't be blank")
+        expect(@order_form.errors.full_messages).to include("都道府県を入力してください")
       end
       it '都道府県が空だと保存できないこと' do
         @order_form.area_id = nil
         @order_form.valid?
-        expect(@order_form.errors.full_messages).to include("Area can't be blank")
+        expect(@order_form.errors.full_messages).to include("都道府県を入力してください", "都道府県を入力してください")
       end
       it '市区町村が空だと保存できないこと' do
         @order_form.city = nil
         @order_form.valid?
-        expect(@order_form.errors.full_messages).to include("City can't be blank")
+        expect(@order_form.errors.full_messages).to include("市区町村を入力してください")
       end
       it '番地が空だと保存できないこと' do
         @order_form.block = nil
         @order_form.valid?
-        expect(@order_form.errors.full_messages).to include("Block can't be blank")
+        expect(@order_form.errors.full_messages).to include("番地を入力してください")
       end
       it '電話番号が空だと保存できないこと' do
         @order_form.phone_number = nil
         @order_form.valid?
-        expect(@order_form.errors.full_messages).to include("Phone number can't be blank")
+        expect(@order_form.errors.full_messages).to include("電話番号を入力してください", "電話番号が無効です")
       end
       it '電話番号にハイフンがあると保存できないこと' do
         @order_form.phone_number = '123 - 1234 - 1234'
         @order_form.valid?
-        expect(@order_form.errors.full_messages).to include('Phone number is invalid')
+        expect(@order_form.errors.full_messages).to include("電話番号が無効です")
       end
       it '電話番号が９桁以下あると保存できないこと' do
         @order_form.phone_number = 12_345_678
         @order_form.valid?
-        expect(@order_form.errors.full_messages).to include('Phone number is invalid')
+        expect(@order_form.errors.full_messages).to include("電話番号が無効です")
       end
       it '電話番号が12桁以上あると保存できないこと' do
         @order_form.phone_number = 12_345_678_910_123_111
         @order_form.valid?
-        expect(@order_form.errors.full_messages).to include('Phone number is invalid')
+        expect(@order_form.errors.full_messages).to include("電話番号が無効です")
       end
       it 'トークンが空だと保存できないこと' do
         @order_form.token = nil
         @order_form.valid?
-        expect(@order_form.errors.full_messages).to include("Token can't be blank")
+        expect(@order_form.errors.full_messages).to include("カード情報を入力してください")
       end
     end
   end

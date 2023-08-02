@@ -7,11 +7,11 @@ class OrderForm
     validates :user_id
     validates :item_id
    # sippng addressモデル
-    validates :postcode, format: { with: /\A[0-9]{3}-[0-9]{4}\z/, message: 'is invalid. Include hyphen(-)' }
-    validates :area_id, numericality: { other_than: 0, message: "can't be blank" }
+    validates :postcode, format: { with: /\A[0-9]{3}-[0-9]{4}\z/, message: 'にハイフン(-)が含まれていません' }
+    validates :area_id, numericality: { other_than: 0, message: "を入力してください" }
     validates :city
     validates :block
-    validates :phone_number, format: { with: /\A[0-9]{10,11}\z/, message: 'is invalid' }
+    validates :phone_number, format: { with: /\A[0-9]{10,11}\z/, message: 'が無効です' }
     validates :token
   end
 
