@@ -1,0 +1,14 @@
+ja:
+  activerecord:
+    attributes:
+      user:
+        nickname: 名前
+        text: テキスト
+        image: 画像
+        family_name: 苗字
+        first_name: 名前
+        family_name_kana: 苗字のふりがな
+        first_name_kana: 名前のふりがな
+        birth_day: 生年月日
+      order_form:
+        postcode: 郵便番号
