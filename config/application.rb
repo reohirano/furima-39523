@@ -12,7 +12,9 @@ module Furima39523
     config.load_defaults 7.0
     config.active_storage.variant_processor = :mini_magick
 
-    
+    # 日本語の言語設定
+    config.i18n.default_locale = :ja
+    config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.yml').to_s]
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files
